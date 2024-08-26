@@ -14,6 +14,7 @@
             Console.WriteLine("France");
             Console.WriteLine("Nepal");
             Console.WriteLine("Mali");
+            Console.WriteLine("Ethiopia");
             Console.WriteLine("South Africa");
             Console.WriteLine("Tanzania");
             Console.WriteLine("Uganda");
