@@ -12,7 +12,7 @@
             Console.WriteLine("Kenya");
             myLabel:
             Console.WriteLine("France");
-            Console.WriteLine("Nepal");
+            Console.WriteLine("Ghana");
             Console.WriteLine("Mali");
             Console.WriteLine("Ethiopia");
             Console.WriteLine("South Africa");
