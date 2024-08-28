@@ -18,7 +18,7 @@
             Console.WriteLine("South Africa");
             Console.WriteLine("Tanzania");
             Console.WriteLine("Uganda");
-            Console.WriteLine("Dubai");
+            Console.WriteLine("Senegal");
             i++;
             if(i <= 5)
             {
