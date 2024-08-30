@@ -4,6 +4,13 @@
     {
         static void Main(string[] args)
         {
+            Square square1 = new Square();
+            square1.Add(4, 4); //calls ChildClass1.Add
+
+            Rectangle rectangle1 = new Rectangle();
+            square1.Add(40, 100); //calls ChildClass2.Add
+
+
 
             int i = 1;
             
@@ -31,6 +38,26 @@
 
             
             Console.ReadLine();
+        }
+
+        interface Ishape
+        {
+            void Add(int x, int y);
+        }
+
+        class Square : Ishape
+        {
+            public void Add(int x, int y) 
+            {
+                Console.WriteLine(x+y);
+            }
+        }
+        class Rectangle : Ishape
+        {
+            public void Add(int x, int y)
+            {
+                Console.WriteLine(x+y);
+            }
         }
     }
 }
