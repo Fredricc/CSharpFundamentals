@@ -47,9 +47,9 @@
 
         class Square : Ishape
         {
-            public void Add(int u, int y) 
+            public void Add(int u, int z) 
             {
-                Console.WriteLine(u+y);
+                Console.WriteLine(u+z);
             }
         }
         class Rectangle : Ishape
