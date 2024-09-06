@@ -1,44 +1,28 @@
-﻿namespace CSharpFundamentals
-{
-    internal class Program
+﻿
+using Categories;
+
+internal class Program
     {
-        static void Main(string[] args)
-        {
-            Square square1 = new Square();
-            square1.Add(4, 4); //calls ChildClass1.Add
-
-            Rectangle rectangle1 = new Rectangle();
-            square1.Add(40, 100); //calls ChildClass2.Add
+    static void Main(string[] args)
+    {
+        //Create structure instance
+        Category category = new Category();
 
 
+        //Initialize fields through properties
+        category.CategoryId = 20;
+        category.CategoryName = "General";
 
-            int i = 1;
-            
-            Console.WriteLine("Japan");
-            Console.WriteLine("Sweden");
-            Console.WriteLine("Kenya");
-            myLabel:
-            Console.WriteLine("France");
-            Console.WriteLine("Ghana");
-            Console.WriteLine("Dubai");
-            Console.WriteLine("Mali");
-            Console.WriteLine("Ethiopia");
-            Console.WriteLine("South Africa");
-            Console.WriteLine("Tanzania");
-            Console.WriteLine("Uganda");
-            Console.WriteLine("Senegal");
-            i++;
-            if(i <= 5)
-            {
-                goto myLabel;
-            }
+        //access methods
+        Console.WriteLine(category.CategoryId);
+        Console.WriteLine(category.CategoryName);
+        Console.WriteLine(category.GetCategoryNameLength());
+        Console.ReadLine();
 
-            Console.WriteLine("Germany");
-            Console.WriteLine("Turkey");
 
-            
-            Console.ReadLine();
-        }
+    }
+
+}
 
         interface Ishape
         {
@@ -59,5 +43,3 @@
                 Console.WriteLine(x+y);
             }
         }
-    }
-}
