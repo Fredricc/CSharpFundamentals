@@ -6,12 +6,12 @@ internal class Program
     static void Main(string[] args)
     {
         //Create structure instance
-        Category category = new Category();
+        Category category = new Category(30, "Senior");
 
 
         //Initialize fields through properties
-        category.CategoryId = 20;
-        category.CategoryName = "General";
+        //category.CategoryId = 20;
+        //category.CategoryName = "General";
 
         //access methods
         Console.WriteLine(category.CategoryId);
