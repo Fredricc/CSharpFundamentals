@@ -5,6 +5,10 @@ internal class Program
     {
     static void Main(string[] args)
     {
+        User <int> user1 = new User<int>();
+        User <bool> user2 = new User<bool>();
+        user1.RegistrationStatus = 100;
+        user2.RegistrationStatus = false;
         //Create structure instance
         Category category = new Category(30, "Senior");
 
@@ -14,6 +18,9 @@ internal class Program
         //category.CategoryName = "General";
 
         //access methods
+        Console.WriteLine($"Registration Status user1: {user1.RegistrationStatus}");
+        Console.WriteLine($"Registration Status user2: {user2.RegistrationStatus}");
+        Console.WriteLine();
         Console.WriteLine(category.CategoryId);
         Console.WriteLine(category.CategoryName);
         Console.WriteLine(category.GetCategoryNameLength());
