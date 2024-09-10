@@ -1,14 +1,26 @@
 ﻿
 using Categories;
+using static Categories.PostGraduate;
 
 internal class Program
     {
     static void Main(string[] args)
     {
-        User <int> user1 = new User<int>();
-        User <bool> user2 = new User<bool>();
+        //create object of generic class
+        MarksPrinter<GraduateStudent> mp = new MarksPrinter<GraduateStudent> ();
+
+        mp.stu = new GraduateStudent() { Marks = 80 };
+        mp.PrintMarks();
+        Console.ReadLine();
+
+
+        User <int, int> user1 = new User<int, int>();
+        User <bool, string> user2 = new User<bool, string>();
         user1.RegistrationStatus = 100;
         user2.RegistrationStatus = false;
+
+        user1.Age = 30;
+        user2.Age = "30-40";
         //Create structure instance
         Category category = new Category(30, "Senior");
 
@@ -18,6 +30,9 @@ internal class Program
         //category.CategoryName = "General";
 
         //access methods
+        Console.WriteLine($"Age user1: {user1.Age}");
+        Console.WriteLine($"Age user2: {user2.Age}");
+        Console.WriteLine();
         Console.WriteLine($"Registration Status user1: {user1.RegistrationStatus}");
         Console.WriteLine($"Registration Status user2: {user2.RegistrationStatus}");
         Console.WriteLine();
