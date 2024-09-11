@@ -6,6 +6,13 @@ internal class Program
     {
     static void Main(string[] args)
     {
+        //create object using "using structure"
+        using(Sample s = new Sample())
+        {
+            s.DisplayDataFromDatabase();
+        }
+
+
         //create object of generic class
         MarksPrinter<GraduateStudent> mp = new MarksPrinter<GraduateStudent> ();
 
