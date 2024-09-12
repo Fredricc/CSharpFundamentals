@@ -4,13 +4,18 @@ using static Categories.PostGraduate;
 
 internal class Program
     {
-    static void Main(string[] args)
+    static void DoWork()
     {
-        //create object using "using structure"
-        using(Sample s = new Sample())
+        //create object using "using declaration"
+        using Sample s = new Sample();
         {
             s.DisplayDataFromDatabase();
         }
+    }
+
+    static void Main(string[] args)
+    {
+        DoWork();
 
 
         //create object of generic class
