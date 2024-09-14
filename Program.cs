@@ -15,6 +15,18 @@ internal class Program
 
     static void Main(string[] args)
     {
+        Sample s = new Sample();
+
+        MyDelegate myDelegate;
+
+        //add ref of first method
+        myDelegate = s.Add;
+
+        //add ref of second method
+        myDelegate += s.Multiply;
+
+        myDelegate.Invoke(30, 40);
+
         DoWork();
 
 
