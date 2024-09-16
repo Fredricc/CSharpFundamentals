@@ -1,5 +1,7 @@
 ﻿
 using Categories;
+using CSharpFundamentals;
+using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
 
 internal class Program
@@ -15,6 +17,20 @@ internal class Program
 
     static void Main(string[] args)
     {
+        //create obj of Subscriber class
+        SubScriber subscriber = new SubScriber();
+
+        //Create obj of Publisher class
+        Publisher publisher = new Publisher();
+
+        //Hander the event (or) subscribe to event
+        publisher.myEvent += subscriber.Add;
+
+        //invoke the event
+        publisher.RaiseEvent(10, 50);
+
+
+
         Sample s = new Sample();
 
         MyDelegate myDelegate;
