@@ -42,6 +42,8 @@ internal class Program
         myDelegate += s.Multiply;
 
         myDelegate.Invoke(30, 40);
+        myDelegate.Invoke(300, 40);
+        myDelegate.Invoke(30, 900);
 
         DoWork();
 
