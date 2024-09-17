@@ -29,7 +29,15 @@ internal class Program
         //invoke the event
         publisher.RaiseEvent(10, 50);
 
+        //handle the event (or) subscribe the event
+        publisher.myEvent += delegate (int a, int b)
+        {
+            Console.WriteLine(a / b);
+        };
 
+        publisher.RaiseEvent(30, 40);
+        publisher.RaiseEvent(300, 40);
+        publisher.RaiseEvent(30, 900);
 
         Sample s = new Sample();
 
