@@ -24,7 +24,11 @@ internal class Program
         Publisher publisher = new Publisher();
 
         //Hander the event (or) subscribe to event
-        publisher.myEvent += subscriber.Add;
+        publisher.myEvent += (a , b) =>
+        {
+            int c = a + b;
+            Console.WriteLine(c);
+        };
 
         //invoke the event
         publisher.RaiseEvent(10, 50);
