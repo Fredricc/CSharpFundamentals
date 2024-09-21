@@ -6,58 +6,30 @@ using static Categories.PostGraduate;
 
 internal class Program
     {
-    static void DoWork()
+    public void DoWork()
     {
-        //create object using "using declaration"
-        using Sample s = new Sample();
-        {
-            s.DisplayDataFromDatabase();
-        }
-    }
-
-    static void Main(string[] args)
-    {
-        //create obj of Subscriber class
-        SubScriber subscriber = new SubScriber();
-
-        //Create obj of Publisher class
         Publisher publisher = new Publisher();
 
         //Hander the event (or) subscribe to event
-        publisher.myEvent += (a , b) =>
+        publisher.myEvent += (sender, e) =>
         {
-            int c = a + b;
+            int c = e.a + e.b;
             Console.WriteLine(c);
         };
 
         //invoke the event
-        publisher.RaiseEvent(10, 50);
+        publisher.RaiseEvent(this, 30, 40);
+        publisher.RaiseEvent(this, 300, 40);
+        publisher.RaiseEvent(this, 30, 900);
+    }
 
-        //handle the event (or) subscribe the event
-        publisher.myEvent += delegate (int a, int b)
-        {
-            Console.WriteLine(a / b);
-        };
+    static void Main(string[] args)
+    {
 
-        publisher.RaiseEvent(30, 40);
-        publisher.RaiseEvent(300, 40);
-        publisher.RaiseEvent(30, 900);
+        Program p = new Program();
+        p.DoWork();
 
-        Sample s = new Sample();
 
-        MyDelegate myDelegate;
-
-        //add ref of first method
-        myDelegate = s.Add;
-
-        //add ref of second method
-        myDelegate += s.Multiply;
-
-        myDelegate.Invoke(30, 40);
-        myDelegate.Invoke(300, 40);
-        myDelegate.Invoke(30, 900);
-
-        DoWork();
 
 
         //create object of generic class
