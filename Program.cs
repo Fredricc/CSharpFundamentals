@@ -1,6 +1,7 @@
 ﻿
 using Categories;
 using CSharpFundamentals;
+using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
 
@@ -25,6 +26,18 @@ internal class Program
 
     static void Main(string[] args)
     {
+
+        //Create expression tree with Func
+        Expression<Func<int, int>> expression = a => a * a;
+
+        //Compile expression using Compile Method to invoke it as Delegate
+        Func <int, int> mySecondDelegate = expression.Compile();
+
+        //Execute the Method
+        int result = mySecondDelegate.Invoke(10);
+
+        Console.WriteLine(result);
+    Console.ReadKey();
 
         Program p = new Program();
         p.DoWork();
