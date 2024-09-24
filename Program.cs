@@ -26,6 +26,20 @@ internal class Program
 
     static void Main(string[] args)
     {
+        int operation = 1;//1 to 4
+        string result1;
+
+        //switch expression
+        result1 = operation switch
+        {
+            1 => "Customer",
+            2 => "Employee",
+            3 => "Supplier",
+            4 => "Distributor",
+            _ => "No Case available"
+        };
+
+        Console.WriteLine(result1);
 
         //Create expression tree with Func
         Expression<Func<int, int>> expression = a => a * a;
