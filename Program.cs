@@ -31,7 +31,7 @@ internal class Program
     {
         //create an array
         int[] a = new int[5] { 1, 2, 3, 4, 5 };
-        string[] b = new string[5] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+        string[] b = new string[7] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Thursday", "Friday" };
 
         //display the values in the array using for loop
         for (int i = 0; i < a.Length; i++)
@@ -58,7 +58,20 @@ internal class Program
 
         Console.WriteLine();
 
+
+
+        //search for Friday in the array
+        int n = Array.IndexOf(b, "Friday");
+        Console.WriteLine("Index of Friday is " + n);
+        Console.WriteLine();
+
+        //search for Friday in the array
+        int n2 = Array.IndexOf(b, "Friday", 5);
+        Console.WriteLine("Index of second occurence of Friday is " + n2);
+        Console.WriteLine();
+
         //display the values in the array using for each loop
+        Array.Resize(ref a, 3);
         foreach (int i in a)
         {
             Console.WriteLine(i);
