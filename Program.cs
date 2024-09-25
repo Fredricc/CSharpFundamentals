@@ -80,6 +80,8 @@ internal class Program
 
         Console.WriteLine();
 
+        Array.Reverse(b);
+
         foreach (string i in b)
         {
             Console.WriteLine(i);
