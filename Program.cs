@@ -9,6 +9,9 @@ internal class Program
     {
     public void DoWork()
     {
+       
+
+
         Publisher publisher = new Publisher();
 
         //Hander the event (or) subscribe to event
@@ -26,6 +29,26 @@ internal class Program
 
     static void Main(string[] args)
     {
+        //create an array
+        int[] a = new int[5] { 1, 2, 3, 4, 5 };
+        string[] b = new string[5] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+
+        //display the values in the array
+        for (int i = 0; i < a.Length; i++)
+        {
+            Console.WriteLine(a[i]);
+        }
+
+        Console.WriteLine();
+
+        for (int i = 0; i < b.Length; i++)
+        {
+            Console.WriteLine(b[i]);
+        }
+
+        Console.WriteLine();
+
+
         int operation = 1;//1 to 4
         string result1;
 
@@ -39,6 +62,7 @@ internal class Program
             _ => "No Case available"
         };
 
+        
         Console.WriteLine(result1);
 
         //Create expression tree with Func
