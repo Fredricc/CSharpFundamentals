@@ -71,7 +71,8 @@ internal class Program
         Console.WriteLine();
 
         //display the values in the array using for each loop
-        Array.Resize(ref a, 3);
+        Array.Resize(ref a, 9);
+        Array.Sort(a);
         foreach (int i in a)
         {
             Console.WriteLine(i);
