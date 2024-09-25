@@ -33,7 +33,7 @@ internal class Program
         int[] a = new int[5] { 1, 2, 3, 4, 5 };
         string[] b = new string[5] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 
-        //display the values in the array
+        //display the values in the array using for loop
         for (int i = 0; i < a.Length; i++)
         {
             Console.WriteLine(a[i]);
@@ -44,6 +44,31 @@ internal class Program
         for (int i = 0; i < b.Length; i++)
         {
             Console.WriteLine(b[i]);
+        }
+
+        Console.WriteLine();
+
+        //for loop in reverse order
+        Console.WriteLine();
+
+        for (int i = b.Length-1; i >=0; i--)
+        {
+            Console.WriteLine(b[i]);
+        }
+
+        Console.WriteLine();
+
+        //display the values in the array using for each loop
+        foreach (int i in a)
+        {
+            Console.WriteLine(i);
+        }
+
+        Console.WriteLine();
+
+        foreach (string i in b)
+        {
+            Console.WriteLine(i);
         }
 
         Console.WriteLine();
