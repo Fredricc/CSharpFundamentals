@@ -5,7 +5,13 @@ using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
 
-internal class Program
+public class Employee
+{
+    public int EmpId { get; set; }
+    public string EmpName { get; set; }
+}
+
+public class Program
     {
     public void DoWork()
     {
@@ -29,6 +35,23 @@ internal class Program
 
     static void Main(string[] args)
     {
+        //create array of objects
+        Employee[] employee = new Employee[]
+        {
+            new Employee(){EmpId = 101, EmpName = "Ken"},
+            new Employee(){EmpId = 102, EmpName = "Mark"},
+            new Employee(){EmpId = 103, EmpName = "Ben"},
+        };
+        Console.WriteLine(" Array of Objects ");
+
+        //foreach loop for array of objects
+        foreach (Employee Item in employee)
+        {
+            Console.WriteLine(Item.EmpId + ", " + Item.EmpName);
+        }
+        Console.ReadLine();
+        
+
         //create jagged array
         int[][] d = new int[5][];
         d[0] = new int[3] { 30, 40, 50 };
