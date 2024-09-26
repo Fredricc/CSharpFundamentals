@@ -29,6 +29,27 @@ internal class Program
 
     static void Main(string[] args)
     {
+        //multi-dim array 4 x 3
+        int[,] c = new int[4, 3]
+        {
+            {10, 20, 30 },
+            {40, 50, 60 },
+            {70, 80, 90 },
+            {100, 110, 120 }
+        };
+
+        //read data from multi-dim array
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write(c[i,j]);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+
         //create an array
         int[] a = new int[5] { 1, 2, 3, 4, 5 };
         string[] b = new string[7] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Thursday", "Friday" };
