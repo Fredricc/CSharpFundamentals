@@ -29,6 +29,30 @@ internal class Program
 
     static void Main(string[] args)
     {
+        //create jagged array
+        int[][] d = new int[5][];
+        d[0] = new int[3] { 30, 40, 50 };
+        d[1] = new int[4] { 80, 70, 30, 90 };
+        d[2] = new int[3] { 30, 40, 50 };
+        d[3] = new int[6] { 30, 40, 50, 30, 40, 50 };
+        d[4] = new int[9] { 30, 40, 50, 45, 66,88,99,33,44};
+
+        Console.WriteLine("Jagged Arrays");
+
+        //read jagged array
+        for (int i = 0; i< 5; i++)
+        {
+            for(int j = 0; j < d[i].Length; j++)
+            {
+                Console.Write(d[i][j]);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Mult-Dim Arrays");
+
         //multi-dim array 4 x 3
         int[,] c = new int[4, 3]
         {
