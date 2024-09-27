@@ -35,6 +35,25 @@ public class Program
 
     static void Main(string[] args)
     {
+        //create reference variable for list class & create object of list class
+        List<int> myList = new List<int>() { 10, 20, 50 };
+
+        //read elements using foreach loop
+        Console.WriteLine("Using foreach loop to read value in a list");
+        foreach(int item in myList)
+        {
+            Console.WriteLine(item);
+        }
+
+        //read elements using foreach loop
+        Console.WriteLine("Using for loop to read value in a list");
+        for (int i = 0; i < myList.Count; i++)
+        {
+            Console.WriteLine(myList[i]);
+        }
+
+
+
         //create array of objects
         Employee[] employee = new Employee[]
         {
