@@ -38,6 +38,15 @@ public class Program
         //create reference variable for list class & create object of list class
         List<int> myList = new List<int>() { 10, 20, 50 };
 
+        //add new element at the end of the existing collection
+        myList.Add(40);
+
+        //Another collection
+        List<int> anotherList = new List<int>() { 50, 60, 70 };
+
+        //adding another collection to existing collection
+        myList.AddRange(anotherList);
+
         //read elements using foreach loop
         Console.WriteLine("Using foreach loop to read value in a list");
         foreach(int item in myList)
