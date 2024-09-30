@@ -54,6 +54,11 @@ public class Program
         List<int> otherList = new List<int>() { 100, 200, 300 };
         myList.InsertRange(2, otherList);
 
+        //search for 300
+        int w = myList.IndexOf(300);
+
+        Console.WriteLine("Search Index of 300 is:"+ w);
+
         //read elements using foreach loop
         Console.WriteLine("Using foreach loop to read value in a list");
         foreach(int item in myList)
