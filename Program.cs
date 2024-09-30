@@ -47,6 +47,13 @@ public class Program
         //adding another collection to existing collection
         myList.AddRange(anotherList);
 
+        //insert element at position 1
+        myList.Insert(1, 100);
+
+        //insert elements in position 2
+        List<int> otherList = new List<int>() { 100, 200, 300 };
+        myList.InsertRange(2, otherList);
+
         //read elements using foreach loop
         Console.WriteLine("Using foreach loop to read value in a list");
         foreach(int item in myList)
