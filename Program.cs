@@ -59,6 +59,15 @@ public class Program
 
         Console.WriteLine("Search Index of 300 is:"+ w);
 
+        //sort list
+        myList.Sort();
+
+        //collection for binary search can only be done if the list is presorted.
+        int w2 = myList.BinarySearch(100);
+
+        Console.WriteLine("BinarySearch in sorted list for  100 is:" + w2);
+
+
         //read elements using foreach loop
         Console.WriteLine("Using foreach loop to read value in a list");
         foreach(int item in myList)
