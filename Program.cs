@@ -67,6 +67,18 @@ public class Program
 
         Console.WriteLine("BinarySearch in sorted list for  100 is:" + w2);
 
+        //Exists: check if the student is failed
+        bool b2 = myList.Exists(m => m < 35);
+
+        if(b2 == true)
+        {
+            Console.WriteLine("Some Elements in the List  are less than 35");
+        }
+        else
+        {
+            Console.WriteLine("All elements in the list are greater than 35.");
+        }
+
 
         //read elements using foreach loop
         Console.WriteLine("Using foreach loop to read value in a list");
