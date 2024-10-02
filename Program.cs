@@ -67,6 +67,9 @@ public class Program
 
         Console.WriteLine("BinarySearch in sorted list for  100 is:" + w2);
 
+        //converting list to array
+        int[] myListArray = myList.ToArray();
+
         //Exists: check if the student is failed
         bool b2 = myList.Exists(m => m < 35);
 
