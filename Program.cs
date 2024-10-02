@@ -1,6 +1,7 @@
 ﻿
 using Categories;
 using CSharpFundamentals;
+using System.Collections;
 using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
@@ -35,6 +36,29 @@ public class Program
 
     static void Main(string[] args)
     {
+        //Create a hashTable
+        Hashtable employees = new Hashtable()
+        {
+            { 102, "Smith"},
+            { 105, "James"},
+            { 103, "Allen"},
+            {101, "Scott" },
+            {104, "Jones" },
+            {"Hello", 10.432 }
+        };
+
+        //Add element
+        employees.Add(100, "Anna");
+
+        //Remove element
+        employees.Remove(103);
+
+        //Foreach
+        foreach (var item in employees)
+        {
+            Console.WriteLine(item);
+        }
+
         //create reference variable for list class & create object of list class
         List<int> myList = new List<int>() { 10, 20, 50 };
 
@@ -69,6 +93,10 @@ public class Program
 
         //converting list to array
         int[] myListArray = myList.ToArray();
+
+        //ForEach Method
+        Console.WriteLine("\nForEach method");
+        myList.ForEach(x => Console.WriteLine(x));
 
         //Exists: check if the student is failed
         bool b2 = myList.Exists(m => m < 35);
