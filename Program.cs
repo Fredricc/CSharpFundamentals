@@ -34,9 +34,36 @@ public class Program
         publisher.RaiseEvent(this, 30, 900);
     }
 
-    static void Main(string[] args)
+    /// <summary>
+    /// main class
+    /// </summary>
+    static void Main()
     {
+        //create an object of hashset
+        Console.WriteLine("Hashset");
+        HashSet<string> messages = new HashSet<string>()
+        { "Good Morning", "How are you", "Have a good day."};
+
+        //add
+        messages.Add("Good to Hear from you");
+
+        //Remove
+        messages.Remove("Have a good day.");
+
+        //Remove where
+        messages.RemoveWhere(m => m.EndsWith("you"));
+
+        //  Count
+        Console.WriteLine("Hashset Count: "+ messages.Count );
+
+        foreach (string message in messages)
+        {
+            Console.WriteLine(message);
+        }
+        Console.WriteLine();
+
         //Create a hashTable
+        Console.WriteLine("HashTable");
         Hashtable employees = new Hashtable()
         {
             { 102, "Smith"},
@@ -53,8 +80,15 @@ public class Program
         //Remove element
         employees.Remove(103);
 
+        //get value based on key
+        if (employees[105] is string)
+        {
+            string value = Convert.ToString(employees[105]);
+            Console.WriteLine("\n" + value );
+        }
+
         //Foreach
-        foreach (var item in employees)
+        foreach (DictionaryEntry item in employees)
         {
             Console.WriteLine(item);
         }
