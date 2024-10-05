@@ -47,7 +47,7 @@ public class Program
         //add
         messages.Add("Good to Hear from you");
 
-        //Remove
+        //Remove value from hashset
         messages.Remove("Have a good day.");
 
         //Remove where
