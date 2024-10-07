@@ -12,6 +12,19 @@ public class Employee
     public string EmpName { get; set; }
 }
 
+
+/// <summary>
+/// Product class which hold the product properties
+/// </summary>
+public class Product
+{
+    public int ProductId { get; set; }
+    public string ProductName { get; set; }
+    public double ProductPrice { get; set; }
+
+    public DateTime DateOfManufacturing { get; set; }
+}
+
 public class Program
     {
     public void DoWork()
@@ -39,6 +52,46 @@ public class Program
     /// </summary>
     static void Main()
     {
+        //list object
+        List<Product> products = new List<Product>();
+
+        //loop to read data from user
+        string choice;
+
+        do
+        {
+            Console.Write("Enter Product ID: ");
+            int pid = int.Parse(Console.ReadLine());
+            Console.Write("Enter Product Name: ");
+            string pname = Console.ReadLine();
+            Console.Write("Enter Product Price: ");
+            double unitPrice = double.Parse(Console.ReadLine());
+            Console.Write("Enter Product Date of Manufacture (yyyy-MM-dd): ");
+            DateTime dom = DateTime.Parse(Console.ReadLine());
+
+            //create a new object of product class
+            Product product = new Product() { ProductId = pid, ProductName = pname, ProductPrice = unitPrice, DateOfManufacturing = dom };
+
+            products.Add(product);
+
+            //Ask the user to continue
+            Console.WriteLine( "Product Added....\n");
+            Console.WriteLine("Do you want to continue to next product? (Yes/No)");
+
+            choice = Console.ReadLine();
+
+        } while(choice != "No" && choice != "no" && choice != "n" && choice != "N");
+        {
+            Console.WriteLine("\nProducts:");
+
+            //foreach
+            foreach (Product item in products)
+            {
+                Console.WriteLine(item.ProductId + ", " + item.ProductName+ ", " + item.ProductPrice + ", " + item.DateOfManufacturing.ToShortTimeString());
+            }
+            Console.ReadLine();
+        }
+
         //create an object of hashset
         Console.WriteLine("Hashset");
         HashSet<string> messages = new HashSet<string>()
