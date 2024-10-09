@@ -6,25 +6,6 @@ using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
 
-public class Employee
-{
-    public int EmpId { get; set; }
-    public string EmpName { get; set; }
-}
-
-
-/// <summary>
-/// Product class which hold the product properties
-/// </summary>
-public class Product
-{
-    public int ProductId { get; set; }
-    public string ProductName { get; set; }
-    public double ProductPrice { get; set; }
-
-    public DateTime DateOfManufacturing { get; set; }
-}
-
 public class Program
     {
     public void DoWork()
@@ -410,23 +391,3 @@ public class Program
     }
 
 }
-
-        interface Ishape
-        {
-            void Add(int x, int y);
-        }
-
-        class Square : Ishape
-        {
-            public void Add(int u, int z) 
-            {
-                Console.WriteLine(u+z);
-            }
-        }
-        class Rectangle : Ishape
-        {
-            public void Add(int x, int y)
-            {
-                Console.WriteLine(x+y);
-            }
-        }
