@@ -5,14 +5,12 @@ using System.Collections;
 using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
+using College;
 
 public class Program
     {
     public void DoWork()
     {
-       
-
-
         Publisher publisher = new Publisher();
 
         //Hander the event (or) subscribe to event
@@ -28,11 +26,36 @@ public class Program
         publisher.RaiseEvent(this, 30, 900);
     }
 
+
     /// <summary>
     /// main class
     /// </summary>
     static void Main()
     {
+
+        //Creat object of Student class
+        College.Student student = new College.Student();
+        student.RollNo = 1;
+        student.StudentName = "Allen";
+        student.Email = "allen@gmail.com";
+        student.examinations = new List<Examination>();
+        student.examinations.Add(new Examination() { ExaminationName = "Intermidiate C#", Month = 1, Year = 2024, MaxMarks = 100, SecuredMarks = 89 });
+        student.examinations.Add(new Examination() { ExaminationName = "Advanced C#", Month = 1, Year = 2024, MaxMarks = 100, SecuredMarks = 95 });
+        student.examinations.Add(new Examination() { ExaminationName = "Azure", Month = 1, Year = 2024, MaxMarks = 100, SecuredMarks = 90 });
+        student.examinations.Add(new Examination() { ExaminationName = "Terraform", Month = 1, Year = 2024, MaxMarks = 100, SecuredMarks = 97 });
+
+        //print
+        Console.WriteLine("One to many relationship Example");
+        Console.WriteLine("Roll No: " + student.RollNo);
+        Console.WriteLine("Student Name: " + student.StudentName);
+        Console.WriteLine("Email: " + student.Email);
+        Console.WriteLine("EXAMINATION RESULTS: ");
+        foreach(Examination exam in student.examinations)
+        {
+            Console.WriteLine("- "+ exam.ExaminationName+", "+ exam.Month + "-" + exam.Year + ", " + exam.SecuredMarks + "/" + exam.MaxMarks);
+        }
+
+        Console.ReadKey();
         //list object
         List<Product> products = new List<Product>();
 
