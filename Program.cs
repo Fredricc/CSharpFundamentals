@@ -414,3 +414,25 @@ public class Program
     }
 
 }
+
+namespace Company
+{
+    /// <summary>
+    /// Represents an employee of the organization
+    /// </summary>
+    public class Employee
+    {
+        public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; }
+        public string Email { get; set; }
+
+        public Department dept { get; set; }
+    }
+
+    /// <summary>
+    /// Represents a department of the organisation
+    /// </summary>
+    public class Department
+    {
+    }
+}
