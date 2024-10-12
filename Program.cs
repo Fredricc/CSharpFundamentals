@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
 using College;
+using Company;
 
 public class Program
     {
@@ -32,6 +33,26 @@ public class Program
     /// </summary>
     static void Main()
     {
+        //Creating Many to one relationship
+        //Three employee in same department
+        GoogleEmployee employee1 = new GoogleEmployee() { EmployeeId = 1, EmployeeName = "Scotty", Email = "scotty@gmail.com" };
+        GoogleEmployee employee2 = new GoogleEmployee() { EmployeeId = 2, EmployeeName = "Freddy", Email = "freddy@gmail.com" };
+        GoogleEmployee employee3 = new GoogleEmployee() { EmployeeId = 3, EmployeeName = "Betty", Email = "betty@gmail.com" };
+
+        //create object of department class
+        Department department = new Department() { DepartmentId = 1, DepartmentName = "Engineering Department"};
+        employee1.dept = department;
+        employee2.dept = department;
+        employee3.dept = department;
+
+        Console.WriteLine("Employee 1: \n - Id:  " + employee1.EmployeeId + "\n - Name: " + employee1.EmployeeName + "\n - Employee Email: " + employee1.Email+ "\n - Department Id: " + employee1.dept.DepartmentId+"\n - Department Name: "+ employee1.dept.DepartmentName);
+
+        Console.WriteLine("Employee 2: \n - Id:  " + employee2.EmployeeId + "\n - Name: " + employee2.EmployeeName + "\n - Employee Email: " + employee2.Email+ "\n - Department Id: " + employee2.dept.DepartmentId+"\n - Department Name: "+ employee2.dept.DepartmentName);
+
+        Console.WriteLine("Employee 3: \n - Id:  " + employee3.EmployeeId + "\n - Name: " + employee3.EmployeeName + "\n - Employee Email: " + employee3.Email+ "\n - Department Id: " + employee3.dept.DepartmentId+"\n - Department Name: "+ employee3.dept.DepartmentName);
+
+        Console.ReadLine();
+
 
         //Creat object of Student class
         College.Student student = new College.Student();
@@ -413,26 +434,4 @@ public class Program
 
     }
 
-}
-
-namespace Company
-{
-    /// <summary>
-    /// Represents an employee of the organization
-    /// </summary>
-    public class Employee
-    {
-        public int EmployeeId { get; set; }
-        public string EmployeeName { get; set; }
-        public string Email { get; set; }
-
-        public Department dept { get; set; }
-    }
-
-    /// <summary>
-    /// Represents a department of the organisation
-    /// </summary>
-    public class Department
-    {
-    }
 }
