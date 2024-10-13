@@ -33,6 +33,16 @@ public class Program
     /// </summary>
     static void Main()
     {
+        //Create a collection
+        IEnumerable<string> listMessages;
+        listMessages = new List<string>() { "How are you","Have you ever gone to Texas","Or have you ever visited the United states?","You will sooner than you expect it and you will enjoy the visits","You will be going regularly."};
+
+        //foreach Loop
+        Console.WriteLine("IEnumerable:");
+        foreach(string item in listMessages) Console.WriteLine(item);
+
+
+        Console.ReadLine();
         //Creating Many to one relationship
         //Three employee in same department
         GoogleEmployee employee1 = new GoogleEmployee() { EmployeeId = 1, EmployeeName = "Scotty", Email = "scotty@gmail.com" };
