@@ -33,14 +33,49 @@ public class Program
     /// </summary>
     static void Main()
     {
+        //Creating a queue object
+        Console.WriteLine("Creating a queue object\n");
+        Queue<string> queue = new Queue<string>();
+
+        queue.Enqueue("Task 3");
+        queue.Enqueue("Task 4");
+        queue.Enqueue("Task 6");
+        queue.Enqueue("Task 2");
+        queue.Enqueue("Task 7");
+        queue.Enqueue("Task 1");
+
+        foreach (var item in queue)
+        {
+            Console.WriteLine(item);
+        }
+
+        queue.Dequeue();
+        Console.WriteLine();
+
+        foreach (var item in queue)
+        {
+            Console.WriteLine(item);
+        }
+
+
+
         //Create a collection
         IEnumerable<string> listMessages;
         listMessages = new List<string>() { "How are you","Have you ever gone to Texas","Or have you ever visited the United states?","You will sooner than you expect it and you will enjoy the visits","You will be going regularly."};
 
         //foreach Loop
-        Console.WriteLine("IEnumerable:");
+        Console.WriteLine("\nIEnumerable:");
         foreach(string item in listMessages) Console.WriteLine(item);
 
+        //IEnumarator
+        Console.WriteLine("\n IEnumarator:");
+        IEnumerator<string> enumeratorMessages = listMessages.GetEnumerator();
+        enumeratorMessages.Reset();
+        while(enumeratorMessages.MoveNext())
+        {
+            Console.WriteLine(enumeratorMessages.Current);
+        }
+        
 
         Console.ReadLine();
         //Creating Many to one relationship
