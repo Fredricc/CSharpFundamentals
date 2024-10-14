@@ -49,6 +49,10 @@ public class Program
             Console.WriteLine(item);
         }
 
+        string pk = queue.Peek();
+        Console.WriteLine("Peek: "+ pk);
+        Console.WriteLine();
+        Console.WriteLine("Dequeue: ");
         queue.Dequeue();
         Console.WriteLine();
 
@@ -57,6 +61,8 @@ public class Program
             Console.WriteLine(item);
         }
 
+        string pk2 = queue.Peek();
+        Console.WriteLine("Peek: " + pk2);
 
 
         //Create a collection
