@@ -7,6 +7,7 @@ using System.Reflection.PortableExecutable;
 using static Categories.PostGraduate;
 using College;
 using Company;
+using ClassLibrary1;
 
 public class Program
     {
@@ -33,6 +34,18 @@ public class Program
     /// </summary>
     static void Main()
     {
+        //Deconstructing Tuple
+        //create object
+        CustomerA customer = new CustomerA();
+
+        //get details
+        (int customerID, string customerName, string email) = customer.GetCustomerDetails();
+
+        Console.WriteLine(customerID);
+        Console.WriteLine(customerName);
+        Console.WriteLine(email);
+        Console.WriteLine();
+
         //Creating a queue object
         Console.WriteLine("Creating a queue object\n");
         Queue<string> queue = new Queue<string>();
