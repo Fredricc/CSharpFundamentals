@@ -39,11 +39,10 @@ public class Program
         CustomerA customer = new CustomerA();
 
         //get details
-        (int customerID, string customerName, string email) = customer.GetCustomerDetails();
+        (int customerID, string customerName,_) = customer.GetCustomerDetails();
 
         Console.WriteLine(customerID);
         Console.WriteLine(customerName);
-        Console.WriteLine(email);
         Console.WriteLine();
 
         //Creating a queue object
