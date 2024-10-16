@@ -74,7 +74,7 @@ public class Program
         }
 
         string pk2 = queue.Peek();
-        Console.WriteLine("Peek: " + pk2);
+        Console.WriteLine("Peek first value: " + pk2);
 
 
         //Create a collection
